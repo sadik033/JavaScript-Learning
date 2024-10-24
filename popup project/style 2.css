@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    background-color: #decdac;
+    font-family: cursive;
+}
+.popup{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+   
+    /* display: none; */
+}
+.popup-open .popup{
+    display: block;
+    transform: scale(1);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-icon{
+    font-size: 48px;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    font-family: serif;
+    cursor: pointer;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-open .overlay{
+    display: block;
+}
+
+.popup-container{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.popup-container.popup-open{
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+}
+
+.main-card{
+    height: 210px;
+    width: 390px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
+.text-content {
+    
+    text-align: center;
+    margin-top: 40px;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.miss{
+    color: red;
+}
+
+.inr-text{
+    height: 24%;
+    width: 55%;
+    background-color: orange;
+    border-radius: 24px;
+    position: absolute;
+    left: 24%;
+    top: 40%;
+}
+button{
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    inset: 0;
+    position: absolute;
+    
+    
+}
+button:hover{
+    text-decoration: underline;
+    background-color: rgb(204, 134, 3);
+    border-radius: 24px;
+
+}
+
+.emailInput{
+    text-align: center;
+    margin-top: 60px;
+}
+input{
+    border: 2px solid #ccc;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            outline: none;
+            transition: border-color 0.3s;
+}
+input:hover{
+    border-color: #007bff;
+}
+.submit{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit:hover {
+    background-color: #0056b3;
+}
